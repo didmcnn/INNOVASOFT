@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&display=swap");
 body, html {
+  background-color: rgb(10, 21, 38);
   font-family: "Inconsolata", monospace;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  z-index: -1;
+  height: 100vh;
+  overflow: hidden;
 }
 .video-background video {
   width: 100%;
@@ -22,13 +21,43 @@ body, html {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.video-background .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(to top, rgb(10, 21, 38), transparent);
+  pointer-events: none;
+}
 
+@media (max-width: 768px) {
+  .video-background::after {
+    height: 40%;
+  }
+}
+@media (max-width: 576px) {
+  .video-background::after {
+    height: 50%;
+  }
+}
 .navbar-transparent {
   background-color: transparent !important;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  top: 2.5rem;
+  top: 0;
   left: 0;
+  z-index: 1000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .navbar-transparent .navbar-brand {
   position: absolute;
@@ -56,5 +85,77 @@ body, html {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .navbar-transparent .navbar-nav {
     margin-left: auto;
+  }
+}
+
+.floating-social-icons {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.floating-social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+.floating-social-icons a:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 768px) {
+  .floating-social-icons {
+    top: auto;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+  }
+  .floating-social-icons a {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+
+.image-text-container .image-text-item {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.image-text-container .image-text-item img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-text-container .image-text-item p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .image-text-container .image-text-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .image-text-container .image-text-item img {
+    width: 100%;
+  }
+  .image-text-container .image-text-item p {
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: center;
   }
 }/*# sourceMappingURL=innovasoftstyle.css.map */

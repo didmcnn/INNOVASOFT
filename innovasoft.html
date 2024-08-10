@@ -1,46 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InnovaSoft</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="InnovaSoftStyle.css">
 </head>
+
 <body>
- <!-- Video Background -->
- <div class="video-background">
+<!-- Video Background -->
+<div class="video-background">
     <video autoplay muted loop id="bgVideo">
         <source src="video.mp4" type="video/mp4">
         Tarayıcınız bu videoyu desteklemiyor.
     </video>
+    <div class="video-overlay"></div>
 </div>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-transparent">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item me-5">
-                    <a class="nav-link" href="#">Anasayfa</a>
-                </li>
-                <li class="nav-item me-5">
-                    <a class="nav-link" href="#">Neler Yapıyoruz?</a>
-                </li>
-                <li class="nav-item me-5">
-                    <a class="nav-link" href="#">Bize Ulaşın</a>
-                </li>
-                <li class="nav-item me-5">
-                    <a class="nav-link" href="#">Hikayemiz</a>
-                </li>
-            </ul>
-            
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-transparent">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">Anasayfa</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">Neler Yapıyoruz?</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">Bize Ulaşın</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">Hikayemiz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+<!-- Sosyal Medya -->
+<div class="floating-social-icons me-3">
+    <a href="#" target="_blank" class="btn btn-outline-primary">
+        <i class="bi bi-instagram"></i>
+    </a>
+    <a href="#" target="_blank" class="btn btn-outline-primary">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="#" class="btn btn-outline-primary">
+        <i class="bi bi-threads"></i>
+    </a>
+</div>
+
+
+    <!-- Container with Images and Text -->
+    <div class="container mt-5 image-text-container">
+        <div class="row">
+            <div class="col-md-6 offset-md-5">
+                <div class="image-text-item">
+                    <img src="resim.jpg" alt="Resim 1" class="img-fluid">
+                    <p class="mt-2">Bu, birinci resim açıklaması.</p>
+                </div>
+                <div class="image-text-item mt-4">
+                    <img src="resim.jpg" alt="Resim 2" class="img-fluid">
+                    <p class="mt-2">Bu, ikinci resim açıklaması.</p>
+                </div>
+                <div class="image-text-item mt-4">
+                    <img src="resim.jpg" alt="Resim 3" class="img-fluid">
+                    <p class="mt-2">Bu, üçüncü resim açıklaması.</p>
+                </div>
+                <div class="image-text-item mt-4">
+                    <img src="resim.jpg" alt="Resim 4" class="img-fluid">
+                    <p class="mt-2">Bu, dördüncü resim açıklaması.</p>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
