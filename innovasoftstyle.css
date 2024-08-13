@@ -159,3 +159,213 @@ body, html {
     text-align: center;
   }
 }/*# sourceMappingURL=innovasoftstyle.css.map */
+#services {
+  padding: 200px 0;
+}
+
+#services .header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#services .header h2 {
+  font-size: 46px;
+  font-weight: bold;
+  color: white;
+}
+
+#services .header p {
+  font-size: 18px;
+  color: white;
+}
+
+#services .services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#services .service {
+  flex: 1;
+  min-width: 280px; 
+  max-width: 30%; 
+  display: flex;
+  justify-content: center;
+}
+
+#services .card {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(13, 7, 7, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+#services .card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 24px rgba(19, 18, 18, 0.15);
+}
+
+.services .card img {
+
+  width: 50%; 
+  height: auto; 
+  max-width: 100px;
+  margin-bottom: 15px; 
+  object-fit: cover; 
+  border-radius: 10px;
+}
+#services .card h4 {
+  margin-top: 20px;
+  font-size: 26px;
+  color: #333;
+}
+
+#services .card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+#services .card a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+#services .card a:hover {
+  background-color: #1158dc;
+}
+
+@media (max-width: 768px) {
+  #services .service {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}/*Hizmetler*/
+
+.about-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content-info {
+  flex: 1;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.about-title {
+  font-size: 2em;
+  color: #cc971b;
+  margin-bottom: 20px;
+}
+.about-p{
+  color: white;
+}
+.communication-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: 700px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.communication-button:hover {
+  background-color: #cc971b;
+}
+
+.content-image {
+  flex: 0 0 40%;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}/*Hakkımızda*/
+
+.technology-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title-wrap {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 10px;
+  height: 200px;
+  width: 400px;
+}
+
+.technology-layout-grid {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.technology-wrap,
+.technology-wrap-right {
+  position: absolute;
+}
+
+.technology-wrap {
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.technology-wrap-right {
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 5px;
+}
+
+.form-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.form-subtitle {
+  font-size: 1.2em;
+  color:white;
+  margin: 5px 0;
+}/*Teknolojiler*/
