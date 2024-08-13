@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&display=swap");
-body, html {
+
+body,
+html {
   background-color: rgb(10, 21, 38);
   font-family: "Inconsolata", monospace;
   margin: 0;
@@ -15,12 +17,14 @@ body, html {
   height: 100vh;
   overflow: hidden;
 }
+
 .video-background video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 .video-background .video-overlay {
   position: absolute;
   top: 0;
@@ -28,6 +32,7 @@ body, html {
   width: 100%;
   height: 100%;
 }
+
 .video-background::after {
   content: "";
   position: absolute;
@@ -44,11 +49,13 @@ body, html {
     height: 40%;
   }
 }
+
 @media (max-width: 576px) {
   .video-background::after {
     height: 50%;
   }
 }
+
 .navbar-transparent {
   background-color: transparent !important;
   position: fixed;
@@ -59,6 +66,7 @@ body, html {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .navbar-transparent .navbar-brand {
   position: absolute;
   left: 50%;
@@ -66,6 +74,7 @@ body, html {
   color: white !important;
   font-weight: 600;
 }
+
 .navbar-transparent .navbar-nav .nav-link {
   color: #fff;
   font-size: 1rem;
@@ -73,15 +82,18 @@ body, html {
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+
 .navbar-transparent .navbar-nav .nav-link:hover {
   color: #ffffff;
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
 }
+
 @media (max-width: 767.98px) {
   .navbar-transparent .navbar-nav {
     text-align: center;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .navbar-transparent .navbar-nav {
     margin-left: auto;
@@ -96,7 +108,9 @@ body, html {
   z-index: 1000;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
+
 .floating-social-icons a {
   display: flex;
   align-items: center;
@@ -109,11 +123,13 @@ body, html {
   text-align: center;
   transition: transform 0.3s, text-shadow 0.3s;
 }
+
 .floating-social-icons a:hover {
   transform: scale(1.1);
   color: #ffffff;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.5);
 }
+
 @media (max-width: 768px) {
   .floating-social-icons {
     top: auto;
@@ -122,6 +138,7 @@ body, html {
     transform: translateX(50%);
     flex-direction: row;
   }
+
   .floating-social-icons a {
     margin-bottom: 0;
     margin-right: 5px;
@@ -134,25 +151,30 @@ body, html {
   flex-direction: row-reverse;
   align-items: center;
 }
+
 .image-text-container .image-text-item img {
   width: 70%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .image-text-container .image-text-item p {
   color: #ffffff;
   font-size: 1.2rem;
   margin-right: 20px;
   flex: 1;
 }
+
 @media (max-width: 768px) {
   .image-text-container .image-text-item {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .image-text-container .image-text-item img {
     width: 100%;
   }
+
   .image-text-container .image-text-item p {
     margin-right: 0;
     margin-top: 10px;
@@ -187,8 +209,8 @@ body, html {
 
 #services .service {
   flex: 1;
-  min-width: 280px; 
-  max-width: 30%; 
+  min-width: 280px;
+  max-width: 30%;
   display: flex;
   justify-content: center;
 }
@@ -203,8 +225,8 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; 
-  width: 100%; 
+  justify-content: space-between;
+  width: 100%;
 }
 
 #services .card:hover {
@@ -214,13 +236,14 @@ body, html {
 
 .services .card img {
 
-  width: 50%; 
-  height: auto; 
+  width: 50%;
+  height: auto;
   max-width: 100px;
-  margin-bottom: 15px; 
-  object-fit: cover; 
+  margin-bottom: 15px;
+  object-fit: cover;
   border-radius: 10px;
 }
+
 #services .card h4 {
   margin-top: 20px;
   font-size: 26px;
@@ -256,38 +279,48 @@ body, html {
 .about-section {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 
 .content {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   width: 100%;
+  max-width: 1300px;
+  height: 400px;
   overflow: hidden;
+  border-radius: 35px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+  url('image.jpg') no-repeat right center / cover;
 }
 
 .content-info {
-  flex: 1;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  color: white;
   padding: 20px;
-  font-weight: bold;
+  max-width: 45%;
 }
 
 .about-title {
   font-size: 2em;
   color: #cc971b;
+  margin-bottom: 10px;
+}
+
+.about-p {
   margin-bottom: 20px;
 }
-.about-p{
-  color: white;
-}
+
 .communication-button {
   background-color: black;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: 700px;
-  margin-top: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -295,22 +328,16 @@ body, html {
 .communication-button:hover {
   background-color: #cc971b;
 }
-
-.content-image {
-  flex: 0 0 40%;
-}
-
-.content-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
+.content:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }/*Hakkımızda*/
 
 .technology-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  margin-top: 150px;
 }
 
 .title-wrap {
@@ -366,6 +393,6 @@ body, html {
 
 .form-subtitle {
   font-size: 1.2em;
-  color:white;
+  color: white;
   margin: 5px 0;
 }/*Teknolojiler*/
